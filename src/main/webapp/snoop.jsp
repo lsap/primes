@@ -8,14 +8,14 @@
 
 <div><img src="images/jbosscorp_logo.png"></div>
 <h1>Blinkomom<h1>
-<div id=nav>
+<div id=nav float:left>
 <p>Салаты</p>
  <select>
   <option value="volvo">Королевский</option>
   
 </select> 
 </div>
-<div id=section>
+<div id=section float:left>
 <p>Выпечка</p>
  <select>
   <option value="volvo">-</option>
