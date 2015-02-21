@@ -9,7 +9,7 @@
 
 <H1>WebApp JSP Snoop page</H1>
 <h1>Blinkomom<h1>
-<img src="images/index.png">
+<img src="images/index.jpg">
 
 <h2>JVM Memory Monitor</h2>
  
