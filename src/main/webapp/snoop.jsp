@@ -8,7 +8,10 @@
 <BODY>
 
 <h1>Blinkomom<h1>
-<h2>4<h2>
+ <select>
+  <option value="volvo">Салаты</option>
+  
+</select> 
 <img src="images/jbosscorp_logo.png">
 
 </BODY>
