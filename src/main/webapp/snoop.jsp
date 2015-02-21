@@ -8,29 +8,29 @@
 
 <div><img src="images/jbosscorp_logo.png"></div>
 <h1>Blinkomom<h1>
-<div>
-<h1>Салаты<h1>
+<div id=section0>
+<p>Салаты</p>
  <select>
   <option value="volvo">Королевский</option>
   
 </select> 
 </div>
-<div>
-<h3>Выпечка<h3>
+<div id=section1>
+<p>Выпечка</p>
  <select>
   <option value="volvo">-</option>
   
 </select> 
 </div>
 <div>
-<h3>Основные блюда<h3>
+<p>Основные блюда</p>
  <select>
   <option value="volvo">Борщ</option>
   
 </select> 
 </div>
 <div>
-<h3>Вторые блюда<h3>
+<p>Вторые блюда</p>
  <select>
   <option value="volvo">-</option>
   
