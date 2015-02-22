@@ -8,23 +8,15 @@
 
 <div><img src="images/jbosscorp_logo.png"></div>
 <h1>Blinkomom<h1>
-<button onclick="myFunction()">Try it</button>
 
 <div id="nav" height=200px;width=100px;float:left>
-<p id="na"></p>
+<p><%= out.print(request.getParameter("n")); %></p>
  <select>
   <option value="volvo">Королевский</option>
   
 </select> 
 </div>
-<script>
-function myFunction() {
-var person = prompt("Please enter your name", "Harry Potter");
-if (person != null) {
-    document.getElementById("na").innerHTML =
-    <%= request.getParameter("n") %>;
-}}
-</script>
+
 <div id="section" height=200px;width=100px;float:left>
 <p>Выпечка</p>
  <select>
