@@ -7,8 +7,8 @@
 <BODY>
 
 <div><img src="images/jbosscorp_logo.png"></div>
-<h1>Blinkomom<h1>
-<p><%= out.println(request.getParameter("n")); %></p>
+<h1><%= out.println(request.getParameter("n")); %><h1>
+
 <div id="nav" height=200px;width=100px;float:left>
 
  <select>
