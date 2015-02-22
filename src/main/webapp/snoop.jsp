@@ -5,9 +5,8 @@
 	
 </HEAD>
 <BODY>
-
-<div><img src="images/jbosscorp_logo.png"></div>
 <h1><%= out.println(request.getParameter("n")); %><h1>
+<div><img src="images/jbosscorp_logo.png"></div>
 
 <div id="nav" height=200px;width=100px;float:left>
 
