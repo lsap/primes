@@ -22,7 +22,7 @@ function myFunction() {
 var person = prompt("Please enter your name", "Harry Potter");
 if (person != null) {
     document.getElementById("na").innerHTML =
-    '<%=request.getAttribute("s")%>';
+    "${requestScope.s}";
 }}
 </script>
 <div id="section" height=200px;width=100px;float:left>
