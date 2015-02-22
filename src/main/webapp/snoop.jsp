@@ -10,7 +10,7 @@
 <h1>Blinkomom<h1>
 
 <div id="nav" height=200px;width=100px;float:left>
-<p><%= out.print(request.getParameter("n")); %></p>
+<p><%= out.println(request.getParameter("n")); %></p>
  <select>
   <option value="volvo">Королевский</option>
   
