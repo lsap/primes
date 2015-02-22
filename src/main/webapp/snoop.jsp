@@ -6,7 +6,7 @@
 </HEAD>
 <BODY>
 <h1><%= out.println(request.getParameter("n")); %><h1>
-<div><img src="images/jbosscorp_logo.png"></div>
+<img src="images/jbosscorp_logo.png">
 
 </BODY>
 </HTML>
