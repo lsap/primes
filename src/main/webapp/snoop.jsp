@@ -1,14 +1,43 @@
-﻿<html>
-<head><title>Hello</title></head>
-<body>
-<h1>
-<%
-if (request.getParameter("name") == null) {
-   out.println("Hello World");
-}
-else {
-  out.println("Hello, " + request.getParameter("name"));
-}
-%>
-</h1>
-</body></html>
+﻿<HTML>
+<HEAD>
+
+	<TITLE>Blinkomom</TITLE>
+	
+</HEAD>
+<BODY>
+
+<div><img src="images/jbosscorp_logo.png"></div>
+<h1>Blinkomom<h1>
+<p><%= out.println(request.getParameter("n")); %></p>
+<div id="nav" height=200px;width=100px;float:left>
+
+ <select>
+  <option value="volvo">Королевский</option>
+  
+</select> 
+</div>
+
+<div id="section" height=200px;width=100px;float:left>
+<p>Выпечка</p>
+ <select>
+  <option value="volvo">-</option>
+  
+</select> 
+</div>
+<div>
+<p>Основные блюда</p>
+ <select>
+  <option value="volvo">Борщ</option>
+  
+</select> 
+</div>
+<div>
+<p>Вторые блюда</p>
+ <select>
+  <option value="volvo">-</option>
+  
+</select> 
+</div>
+</BODY>
+</HTML>
+
