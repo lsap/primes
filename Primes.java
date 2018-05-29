@@ -1,7 +1,7 @@
-public class Primes { // no QA, exception checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context*/
+public class Primes { // no QA, exception checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
 
-    private int maxNum = 99997; //start (and end) value, length are hard-coded
-    private int minNum = 10001;
+    private int minNum = 10001; //start (and end) value, length are hard-coded
+    private int maxNum = 99997;
 
     private int divNumMax = 0;
     private int palind;
