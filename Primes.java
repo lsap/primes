@@ -1,4 +1,4 @@
-public class Mc { // no QA, exception checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context*/
+public class Primes { // no QA, exception checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context*/
 
     private int maxNum = 99997; //start (and end) value, length are hard-coded
     private int minNum = 10001;
@@ -78,6 +78,6 @@ public class Mc { // no QA, exception checking, serialization capability, annota
     }
    
     public static void main(String[] args) {   
-        new Mc().start();
+        new Primes().start();
     }
 }
