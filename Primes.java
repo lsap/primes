@@ -1,4 +1,4 @@
-public class Primes { // no QA, exception checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
+public class Primes { // no QA, exceptions checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
 
     private int minNum = 10001; //start (and end) value, length are hard-coded
     private int maxNum = 99997;
