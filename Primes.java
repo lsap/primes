@@ -9,13 +9,13 @@ final class Primes { // no QA, exceptions checking, serialization capability, an
        
     private int findMaxPrimeNumber(int maxNumPre) {
 
-        int j;
+
         int z;
         int maxNumNew;
 
         for (int i = maxNumPre; i >= minNum; i = i - 2) {
 
-            for (j = 3; j <= divNumMax; j++) {
+            for (int j = 3; j <= divNumMax; j++) {
 
                 z = i % j;
 
