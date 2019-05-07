@@ -13,7 +13,7 @@ static void palindrome(List<Integer> primeNumbers) {
     long multiplier2 = 0;
     for (int j = 0; j < primeNumbers.size(); j++) {
         for (int k = 0; k < primeNumbers.size(); k++) {
-            long i = primeNumbers.get(j) * primeNumbers.get(k);
+            long i = Long.valueOf(primeNumbers.get(j)) * Long.valueOf(primeNumbers.get(k));
             if (palindromeCheck(i)) {
                 if (i > palindrome) {
                     palindrome = i;
