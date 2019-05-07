@@ -53,29 +53,29 @@ assert palind == 999949999;
     public void start() {
         divNumMax = (int) Math.sqrt(maxNum);
 
-        int fPM;
-        int sPM;
+        int fPN;
+        int sPN;
         boolean isNotPalind;
 
-        fPM = findMaxPrimeNumber(maxNum);
-        sPM = findMaxPrimeNumber(fPM - 2);
-        isNotPalind = findPalindrome(fPM, sPM);
+        fPN = findMaxPrimeNumber(maxNum);
+        sPN = findMaxPrimeNumber(fPN - 2);
+        isNotPalind = findPalindrome(fPN, sPN);
 
         while (isNotPalind) {
 
-            if (sPM <= fPM && sPM > minNum) {
-                sPM = findMaxPrimeNumber(sPM - 2);
-                isNotPalind = findPalindrome(fPM, sPM);
+            if (sPN <= fPN && sPN > minNum) {
+                sPN = findMaxPrimeNumber(sPN - 2);
+                isNotPalind = findPalindrome(fPN, sPN);
 
-            } else if (sPM <= minNum) {
-                fPM = findMaxPrimeNumber(fPM - 2);
-                sPM = fPM;
+            } else if (sPN <= minNum) {
+                fPN = findMaxPrimeNumber(fPN - 2);
+                sPN = fPN;
             }
         }
        
-        System.out.println("1-st prime number: " + fPM);
-        System.out.println("2-nd prime number: " + sPM);
-        System.out.println("1-st * 2-nd = " + palind);
+        System.out.println("1st prime number: " + fPN);
+        System.out.println("2nd prime number: " + sPN);
+        System.out.println("1st * 2nd = " + palind);
     }
    
     public static void main(String[] args) {   
