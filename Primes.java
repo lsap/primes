@@ -1,5 +1,5 @@
-// Copyright (C) 2018 Serhii Kostyrko
-final class Primes { // assert usage, exceptions checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
+// Copyright (C) 2018, 2019 Serhii Kostyrko
+final class Primes { // assert usage, no exceptions checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
 
     private final int minNum = 10001; //start (and end) value, length are hard-coded
     private final int maxNum = 99997;
@@ -36,7 +36,7 @@ final class Primes { // assert usage, exceptions checking, serialization capabil
 
         int resultOfMul = firstPrime * secondPrime;
 
-        String ltrResult = Integer.toString(resultOfMath);
+        String ltrResult = Integer.toString(resultOfMul);
         String rtlResult = new StringBuffer(ltrResult).reverse().toString();
 
         if (ltrResult.equals(rtlResult)) {
