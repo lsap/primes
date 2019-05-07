@@ -23,7 +23,7 @@ static void palindrome(List<Integer> primeNumbers) {
             }
         }
     }
-assert palindrome == 1997667991;
+assert palindrome == 999949999;
     System.out.println("palindrome = " + palindrome
             + "\nmultiplier1 = " + multiplier1
             + "\nmultiplier2 = " + multiplier2);
