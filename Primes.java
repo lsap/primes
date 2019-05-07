@@ -53,13 +53,9 @@ assert palind == 999949999;
     public void start() {
         divNumMax = (int) Math.sqrt(maxNum);
 
-        int fPN;
-        int sPN;
-        boolean isNotPalind;
-
-        fPN = findMaxPrimeNumber(maxNum);
-        sPN = findMaxPrimeNumber(fPN - 2);
-        isNotPalind = findPalindrome(fPN, sPN);
+        int fPN = findMaxPrimeNumber(maxNum);
+        int sPN = findMaxPrimeNumber(fPN - 2);
+        boolean isNotPalind = findPalindrome(fPN, sPN);
 
         while (isNotPalind) {
 
