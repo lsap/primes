@@ -1,10 +1,13 @@
 // Copyright (C) 2018, 2019 Serhii Kostyrko
+import java.util.ArrayList;
+import java.util.List;
+
 final class Primes { // assert usage, no exceptions checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
 
 static final int MAX_MULTIPLIER = 99997; // start (and end) value, length are hard-coded
 static final int MIN_MULTIPLIER = 10001;
 
-static void palindrome(ArrayList<Integer> primeNumbers) {
+static void palindrome(List<Integer> primeNumbers) {
     long palindrome = 0;
     long multiplier1 = 0;
     long multiplier2 = 0;
@@ -20,20 +23,21 @@ static void palindrome(ArrayList<Integer> primeNumbers) {
             }
         }
     }
-assert palind == 999949999;
+assert palindrome == 1997667991;
     System.out.println("palindrome = " + palindrome
             + "\nmultiplier1 = " + multiplier1
             + "\nmultiplier2 = " + multiplier2);
 
 } 
 
-static ArrayList eratosthenesPrimeNumbers(int max, int min) {
-    ArrayList<Integer> primeNumbers = new ArrayList<>();
+static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
+    List<Integer> primeNumbers = new ArrayList<>();
     boolean[] array = new boolean[max];
 
     for (int i = 2; Math.pow(i, 2) <= max; i++) {
         if (!array[i]) {
-            for (int j = (int) Math.pow(i, 2); j < max; j += i) {
+
+            for (int j = i * i; j < max; j += i) {
                 array[j] = true;
             }
         }
@@ -61,7 +65,7 @@ static boolean palindromeCheck(long i) {
 
 public static void main(String[] args) {
 
-    ArrayList<Integer> primeNumbers2 = new ArrayList<>(eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER));
+    List<Integer> primeNumbers2 = new ArrayList<>(eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER));
     palindrome(primeNumbers2);
 }
 } 
