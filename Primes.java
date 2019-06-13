@@ -2,7 +2,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
-final class Primes { // assert usage, no exceptions checking, serialization capability, annotations, security, immutability, BigInteger, boxing check, static context
+final class Primes { // assert usage, no exceptions checking, serialization capability
+    // no annotations, security, immutability, BigInteger, boxing check, static context
 
 static final int MAX_MULTIPLIER = 99997; // start (and end) value, length are hard-coded
 static final int MIN_MULTIPLIER = 10001;
