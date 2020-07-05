@@ -1,5 +1,4 @@
 // Copyright (C) 2018-2020 Serhii Kostyrko
-import java.util.ArrayList;
 import java.util.List;
 
 final class Primes { // assert usage, no exceptions checking, serialization capability
@@ -32,7 +31,7 @@ assert palindrome == 999949999;
 }
 
 static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
-    List<Integer> primeNumbers = new ArrayList<>();
+    List<Integer> primeNumbers = new java.util.ArrayList<>();
     boolean[] array = new boolean[max];
 
     for (int i = 2; Math.pow(i, 2) <= max; i++) {
@@ -66,7 +65,7 @@ static boolean palindromeCheck(long i) {
 
 public static void main(String[] args) {
 
-    var primeNumbers2 = new ArrayList<>(eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER));
-    palindrome(primeNumbers2);
+    var primeNumbers = eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER);
+    palindrome(primeNumbers);
 }
 }
