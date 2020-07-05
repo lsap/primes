@@ -29,7 +29,7 @@ assert palindrome == 999949999;
             + "\nmultiplier1 = " + multiplier1
             + "\nmultiplier2 = " + multiplier2);
 
-} 
+}
 
 static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
     List<Integer> primeNumbers = new ArrayList<>();
@@ -49,7 +49,7 @@ static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
         }
     }
     return primeNumbers;
-}  
+}
 
 static boolean palindromeCheck(long i) {
     char[] palindrome = String.valueOf(i).toCharArray();
@@ -66,7 +66,7 @@ static boolean palindromeCheck(long i) {
 
 public static void main(String[] args) {
 
-    List<Integer> primeNumbers2 = new ArrayList<>(eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER));
+    var primeNumbers2 = new ArrayList<>(eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER));
     palindrome(primeNumbers2);
 }
-} 
+}
