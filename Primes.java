@@ -2,11 +2,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-final class Primes { // assert usage, no exceptions checking, serialization capability
+class Primes { // assert usage, no exceptions checking, serialization capability
     // no annotations, security, immutability, BigInteger, box check, static context
-
 static final int MAX_MULTIPLIER = 99997; // start (and end) value, length are hard-coded
 static final int MIN_MULTIPLIER = 10001;
+private static int limit = MAX_MULTIPLIER;
+private static boolean[] sieve = new boolean[limit + 1];
+private static int limitSqrt = (int)Math.sqrt((double)limit);
 
 static void palindrome(List<Integer> primeNumbers) {
     long palindrome = 0;
@@ -33,8 +35,6 @@ assert palindrome == 999949999;
 
 static List<Integer> seiveAtkin(int limit) {
     var primeNumbers = new ArrayList<Integer>();
-    boolean[] sieve = new boolean[limit + 1];
-    int limitSqrt = (int)Math.sqrt((double)limit);
     java.util.Arrays.fill(sieve, false);
     sieve[0] = false;
     sieve[1] = false;
@@ -44,6 +44,10 @@ static List<Integer> seiveAtkin(int limit) {
         for (int y = 1; y <= limitSqrt; y++) {
             int n = (4 * x * x) + (y * y);
             if (n <= limit && (n % 12 == 1 || n % 12 == 5)) {
+                sieve[n] = !sieve[n];
+            }
+            n = (3 * x * x) + (y * y);
+	    if (n <= limit && (n % 12 == 7)) {
                 sieve[n] = !sieve[n];
             }
             n = (3 * x * x) - (y * y);
@@ -60,9 +64,10 @@ static List<Integer> seiveAtkin(int limit) {
             }
         }
     }
+    var d = new ArrayList<Integer>();
     for (int i = 0, j = 0; i <= limit; i++) {
-					if(java.math.BigInteger.valueOf(i).isProbablePrime(1)) primeNumbers.add(i);
-		        }
+	            if (sieve[i]) {
+					            primeNumbers.add(i);}}
     return primeNumbers;
 }
 
