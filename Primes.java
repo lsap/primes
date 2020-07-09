@@ -61,11 +61,9 @@ static List<Integer> seiveAtkin(int max, int min) {
             }
         }
     }
-    for(int i  = 0 ; i < sieve.length ; i++) {
-	if(sieve[i]) {
-            primeNumbers.add(i);
-	}
-    }
+    for (int i = 0, j = 0; i <= limit; i++) {
+					if(java.math.BigInteger.valueOf(i).isProbablePrime(1)) primeNumbers.add(i);
+		        }
     return primeNumbers;
 }
 
