@@ -1,5 +1,5 @@
 // Copyright (C) 2018-2020 Serhii Kostyrko
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 final class Primes { // assert usage, no exceptions checking, serialization capability
@@ -31,12 +31,11 @@ assert palindrome == 999949999;
 
 }
 
-static List<Integer> seiveAtkin(int max, int min) {
-    List<Integer> primeNumbers = new java.util.ArrayList<>();
-    int limit = max;
+static List<Integer> seiveAtkin(int limit) {
+    var primeNumbers = new ArrayList<Integer>();
     boolean[] sieve = new boolean[limit + 1];
     int limitSqrt = (int)Math.sqrt((double)limit);
-    Arrays.fill(sieve, false);
+    java.util.Arrays.fill(sieve, false);
     sieve[0] = false;
     sieve[1] = false;
     sieve[2] = true;
@@ -68,7 +67,7 @@ static List<Integer> seiveAtkin(int max, int min) {
 }
 
 static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
-    List<Integer> primeNumbers = new java.util.ArrayList<>();
+    var primeNumbers = new ArrayList<Integer>();
     boolean[] array = new boolean[max];
 
     for (int i = 2; Math.pow(i, 2) <= max; i++) {
@@ -104,7 +103,7 @@ public static void main(String... s) {
 
     var primeNumbers = eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER);
     palindrome(primeNumbers);
-    primeNumbers = seiveAtkin(Integer.parseInt(s[0]), Integer.parseInt(s[1]));
+    primeNumbers = seiveAtkin(MAX_MULTIPLIER);
     palindrome(primeNumbers);
 }
 }
