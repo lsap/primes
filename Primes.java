@@ -14,11 +14,11 @@ static void palindrome(List<Integer> primeNumbers) {
     long palindrome = 0;
     long multiplier1 = 0;
     long multiplier2 = 0;
-    for (int j = 0; j < primeNumbers.size(); j++) {
-        for (int k = 0; k < primeNumbers.size(); k++) {
+    for(int j = 0; j < primeNumbers.size(); j++) {
+        for(int k = 0; k < primeNumbers.size(); k++) {
             long i = Long.valueOf(primeNumbers.get(j)) * Long.valueOf(primeNumbers.get(k));
-            if (palindromeCheck(i)) {
-                if (i > palindrome) {
+            if(palindromeCheck(i)) {
+                if(i > palindrome) {
                     palindrome = i;
                     multiplier1 = primeNumbers.get(j);
                     multiplier2 = primeNumbers.get(k);
@@ -26,10 +26,10 @@ static void palindrome(List<Integer> primeNumbers) {
             }
         }
     }
-assert palindrome == 999949999;
+    assert palindrome == 999949999;
     System.out.println("palindrome = " + palindrome
-            + "\nmultiplier1 = " + multiplier1
-            + "\nmultiplier2 = " + multiplier2);
+        + "\nmultiplier1 = " + multiplier1
+        + "\nmultiplier2 = " + multiplier2);
 
 }
 
@@ -40,14 +40,14 @@ static List<Integer> seiveAtkin(int limit) {
     sieve[1] = false;
     sieve[2] = true;
     sieve[3] = true;
-    for (int x = 1; x <= limitSqrt; x++) {
-        for (int y = 1; y <= limitSqrt; y++) {
+    for(int x = 1; x <= limitSqrt; x++) {
+        for(int y = 1; y <= limitSqrt; y++) {
             int n = (4 * x * x) + (y * y);
-            if (n <= limit && (n % 12 == 1 || n % 12 == 5)) {
+            if(n <= limit && (n % 12 == 1 || n % 12 == 5)) {
                 sieve[n] = !sieve[n];
             }
             n = (3 * x * x) + (y * y);
-	    if (n <= limit && (n % 12 == 7)) {
+            if(n <= limit && (n % 12 == 7)) {
                 sieve[n] = !sieve[n];
             }
             n = (3 * x * x) - (y * y);
@@ -56,18 +56,19 @@ static List<Integer> seiveAtkin(int limit) {
             }
         }
     }
-    for (int n = 5; n <= limitSqrt; n++) {
-        if (sieve[n]) {
+    for(int n = 5; n <= limitSqrt; n++) {
+        if(sieve[n]) {
             int x = n * n;
-            for (int i = x; i <= limit; i += x) {
+            for(int i = x; i <= limit; i += x) {
                 sieve[i] = false;
             }
         }
     }
-    var d = new ArrayList<Integer>();
-    for (int i = 0, j = 0; i <= limit; i++) {
-	            if (sieve[i]) {
-					            primeNumbers.add(i);}}
+    for(int i = 0, j = 0; i <= limit; i++) {
+        if(sieve[i]) {
+            primeNumbers.add(i);
+        }
+    }
     return primeNumbers;
 }
 
@@ -75,16 +76,16 @@ static List<Integer> eratosthenesPrimeNumbers(int max, int min) {
     var primeNumbers = new ArrayList<Integer>();
     boolean[] array = new boolean[max];
 
-    for (int i = 2; Math.pow(i, 2) <= max; i++) {
-        if (!array[i]) {
+    for(int i = 2; Math.pow(i, 2) <= max; i++) {
+        if(!array[i]) {
 
-            for (int j = i * i; j < max; j += i) {
+            for(int j = i * i; j < max; j += i) {
                 array[j] = true;
             }
         }
     }
-    for (int i = max - 1; i >= min; i--) {
-        if (!array[i]) {
+    for(int i = max - 1; i >= min; i--) {
+        if(!array[i]) {
             primeNumbers.add(i);
         }
     }
@@ -95,8 +96,8 @@ static boolean palindromeCheck(long i) {
     char[] palindrome = String.valueOf(i).toCharArray();
     int fromBegin = 0;
     int fromEnd = palindrome.length - 1;
-    while (fromBegin < fromEnd) {
-        if (palindrome[fromBegin] == palindrome[fromEnd]) {
+    while(fromBegin < fromEnd) {
+        if(palindrome[fromBegin] == palindrome[fromEnd]) {
             fromBegin++;
             fromEnd--;
         } else return false;
@@ -104,7 +105,7 @@ static boolean palindromeCheck(long i) {
     return true;
 }
 
-public static void main(String... s) {
+public static void main(String... args) {
 
     var primeNumbers = eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER);
     palindrome(primeNumbers);
