@@ -1,1 +1,3 @@
-min
+class Atkin {
+
+}
