@@ -108,9 +108,7 @@ static boolean palindromeCheck(long i) {
 
 public static void main(String... args) {
 
-    var primeNumbers = eratosthenesPrimeNumbers(MAX_MULTIPLIER, MIN_MULTIPLIER);
-    palindrome(primeNumbers);
-    primeNumbers = seiveAtkin(MAX_MULTIPLIER);
+    var primeNumbers = seiveAtkin(MAX_MULTIPLIER);
     palindrome(primeNumbers);
 }
 }
