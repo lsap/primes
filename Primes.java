@@ -106,7 +106,8 @@ static boolean palindromeCheck(long i) {
     return true;
 }
 
-public static void main(String... args) {
+@SafeVarargs
+public static <E extends String> void main(E... args) {
 
     var primeNumbers = seiveAtkin(MAX_MULTIPLIER);
     palindrome(primeNumbers);
