@@ -5,7 +5,7 @@ import java.util.List;
 class Primes { // assert usage, no exceptions checking, serialization capability
     // no cyclomatic complexity calculation
     // no annotations, security, immutability, BigInteger, box check, static context
-static final int MAX_MULTIPLIER = 99997; // start (and end) value, length are hard-coded
+static final int MAX_MULTIPLIER = 99997; // start (+ end) value, length are hard-coded
 static final int MIN_MULTIPLIER = 10001;
 private static int limit = MAX_MULTIPLIER;
 private static boolean[] sieve = new boolean[limit + 1];
